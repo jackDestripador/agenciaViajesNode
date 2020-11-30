@@ -5,29 +5,33 @@ const paginaInicio = (req,res)=>{
         pagina:'Inicio'
     });
 }
-const paginaNosotros = (req,res)=>{
+
+const paginaNosotros =(req,res)=>{//req - lo que enviamos: res- lo que que express nos reponde
+
     res.render('nosotros',{
-        pagina:'Nosotros'
+    pagina: 'Nosotros'        
     });
 }
+
 const paginaViajes = (req,res)=>{
     res.render('viajes',{
-        pagina:'Viajes'
+    pagina: 'Viajes'        
     });
 }
 
 const paginaTestimoniales = (req,res)=>{
     res.render('testimoniales',{
-        pagina:'Testimoniales'
+    pagina: 'Testimoniales'        
     });
 }
 
 
 
+
 export{
     paginaInicio,
-    paginaNosotros,
+    paginaNosotros,    
     paginaViajes,
     paginaTestimoniales,
-    
+   
 }

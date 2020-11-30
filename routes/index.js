@@ -1,11 +1,11 @@
 import express from 'express';
-import {paginaInicio} from '../controllers/paginasControlles.js'
+import {paginaInicio,paginaNosotros, paginaViajes,  paginaTestimoniales} from '../controllers/paginasControlles.js'
 
 const router =express.Router();
 
 router.get('/',paginaInicio) ;
-
-
+router.get('/nosotros',paginaNosotros) ;
+/*
 router.get('/nosotros',(req,res)=>{//req - lo que enviamos: res- lo que que express nos reponde
 
     //const viajes='Viaje a Alemania';
@@ -18,18 +18,16 @@ router.get('/nosotros',(req,res)=>{//req - lo que enviamos: res- lo que que expr
         //viajes
     });
 });
-
+*/
+router.get('/viajes',paginaViajes);
+/*
 router.get('/viajes',(req,res)=>{
     res.render('viajes',{
     pagina: 'Viajes'        
     });
 });
-
-router.get('/testimoniales',(req,res)=>{
-    res.render('testimoniales',{
-    pagina: 'Testimoniales'        
-    });
-});
+*/
+router.get('/testimoniales',paginaTestimoniales);
 
 router.get('/contacto',(req,res)=>{
 
