@@ -26,10 +26,11 @@ const paginaViajes = async (req,res)=>{
     });
 }
 
-const paginaTestimoniales = (req,res)=>{
+
+const paginaTestimoniales =(req,res)=>{//req - lo que enviamos: res- lo que que express nos reponde
+
     res.render('testimoniales',{
-    pagina: 'Testimoniales',
-    viajes,        
+    pagina: 'Testimoniales'        
     });
 }
 //Muestra un viaje por su slug
