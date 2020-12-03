@@ -34,7 +34,8 @@ block contenido
 
                         | #{viaje.disponibles}  Disponible   
                     p= viaje.descripcion.substr(0,100)+ '...'
-                    a(href=`viajes/{viaje.slug}`, class="btn btn-success btn-block") Mas Información    
+                   
+                    a(href=`viajes/${viaje.slug}`, class="btn btn-success btn-block") Mas Información    
 
           
 
