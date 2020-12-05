@@ -6,11 +6,11 @@ import {
     paginaDetalleViaje,
     paginaTestimoniales,
     
-} from '../controllers/paginasControlles.js'
+} from '../controllers/paginasControlles.js';
 
 import {
-    guardarTestimoniales
-}from '../controllers/testimonialControlles.js'
+    guardarTestimonial
+}from '../controllers/testimonialControlles.js';
 
 const router = express.Router();
 
@@ -20,7 +20,7 @@ router.get('/viajes', paginaViajes);
 router.get('/viajes/:slug', paginaDetalleViaje);
 
 router.get('/testimoniales', paginaTestimoniales);
-router.post('/testimoniales', guardarTestimoniales);
+router.post('/testimoniales', guardarTestimonial);
 
 
 export default router;

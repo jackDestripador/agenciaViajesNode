@@ -5,6 +5,7 @@ block contenido
         h1.text-center.mt-5 #{pagina}
         .row
              
+
             h2.d-block.w-100.text-center Agregar un Testimonio
                 
             .row.justify-content-center.col
@@ -12,7 +13,7 @@ block contenido
                     form(action="/testimoniales" method="POST")
                         .form-group
                             label(for="nombre") Nombre
-                            input#nombre(type="text", placeholder="Tu nombre" , name="nombre" , class="form-control")
+                            input#nombre.nombre(type="text", placeholder="Tu nombre" , name="nombre" value="nombre", class="form-control")
                         .form-group
                             label(for="correo") Correo Electronico
                             input#correo(type="text", placeholder="email" , name="email" , class="form-control")
