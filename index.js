@@ -13,31 +13,34 @@ db.authenticate()
 //variables de entorno process.env.PORT
 const port=process.env.PORT || 4000;
 
-//agregar router
-app.use('/',router);
+
 
 //HABILITAR PUG
 app.set('view engine','pug');
 
-/*
+
 //Obtener el año actual
 app.use( (req, res, next) => {
     const year = new Date();
     res.locals.actualYear = year.getFullYear();
-    res.locals.nombresitio="Agencia de viajes";
-    res.locals.unaVariable = "Una nueva variable";
-    console.log(res.locals);
+    
+    
     //console.log(req);
      next();
 });
 
-*/
+
 // Agregar body parser para leer los datos del formulario
-app.use(express.urlencoded({extended: true}));
+
+
+app.use(express.urlencoded({extended:true}));
 
 
 //Definir la carpeta publica
 app.use(express.static('public'));
+
+//agregar router
+app.use('/',router);
 
 app.listen(port,()=>{
     console.log(`El servidor esta funcionando en el puerto ${port}`)
